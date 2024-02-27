@@ -1,27 +1,33 @@
-# Store1
+# Applicazione Store
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.1.
+Questa è un'applicazione che simula uno shop online. È stata sviluppata seguendo un tutorial su YouTube.
 
-## Development server
+## Tecnologie Utilizzate
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Angular**: L'applicazione è realizzata con Angular versione 17.1.1.
+- **Angular Material**: Le componenti dell'applicazione sono realizzate con Angular Material.
+- **Tailwind CSS**: Il CSS dell'applicazione è gestito con Tailwind CSS.
 
-## Code scaffolding
+## Installazione
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Per installare e avviare l'applicazione, seguire i seguenti passaggi:
 
-## Build
+1. Clonare il repository.
+2. Installare le dipendenze con `npm install`.
+3. Avviare l'applicazione con `ng serve`.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Componenti
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Vediamo le componenti: 
 
-## Running end-to-end tests
+- `headers`: è la barra degli strumenti dell'applicazione. Include un link alla pagina home, un pulsante del carrello della spesa che attiva un menu a discesa, e una lista di prodotti nel carrello con le relative opzioni. Questa componente utilizza Angular Material per la UI e Tailwind CSS per lo stile.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- `HomeComponent`: Questa componente gestisce la visualizzazione della pagina principale dello shop. Include un cassetto laterale per i filtri e un layout principale per i prodotti. Il numero di colonne di prodotti mostrate può essere modificato attraverso il componente `ProductsHeaderComponent`.
 
-## Further help
+- `ProductsHeaderComponent`: Questa componente fornisce controlli per ordinare i prodotti, modificare il numero di prodotti mostrati e cambiare il layout dei prodotti. Comunica con la `HomeComponent` attraverso l'emissione di eventi.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+
+
