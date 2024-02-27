@@ -37,6 +37,10 @@ La componente `HomeComponent` include la componente `FiltersComponent` e ascolta
 La componente `HomeComponent` include la componente `ProductBoxComponent` in una griglia. Il numero di colonne della griglia e l'altezza delle righe sono determinati dal valore di `cols` e `rowHeight`, rispettivamente. Se `cols` è 1, allora `fullWidthMode` è `true`.
 
 
+- `CartComponent` rappresenta il carrello. Mostra una tabella con i dettagli di ogni articolo nel carrello, tra cui il prodotto, il nome, il prezzo, la quantità, il totale e le azioni disponibili. Se il carrello è vuoto, mostra un messaggio che dice "Your cart is empty" e un pulsante per iniziare a fare shopping.
+
+La componente `CartComponent` ha un metodo `getTotal(items: Array<CartItem>)` che calcola il totale del carrello sommando il prezzo di ogni articolo moltiplicato per la sua quantità.
+
 
 
 
