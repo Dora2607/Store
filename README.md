@@ -27,6 +27,11 @@ Vediamo le componenti:
 
 - `ProductsHeaderComponent`: Questa componente fornisce controlli per ordinare i prodotti, modificare il numero di prodotti mostrati e cambiare il layout dei prodotti. Comunica con la `HomeComponent` attraverso l'emissione di eventi.
 
+- `FiltersComponent`: Fornisce un pannello espandibile che mostra le categorie di prodotti disponibili. Quando si seleziona una categoria, la componente emette un evento `showCategory` con la categoria selezionata.
+
+La componente `HomeComponent` include la componente `FiltersComponent` e ascolta l'evento `showCategory`. Quando questo evento viene emesso, la `HomeComponent` aggiorna la categoria di prodotti da mostrare.
+
+
 
 
 
