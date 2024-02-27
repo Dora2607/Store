@@ -32,6 +32,11 @@ Vediamo le componenti:
 La componente `HomeComponent` include la componente `FiltersComponent` e ascolta l'evento `showCategory`. Quando questo evento viene emesso, la `HomeComponent` aggiorna la categoria di prodotti da mostrare.
 
 
+- `ProductBoxComponent`: Rappresenta una card di un prodotto. La card mostra un'immagine del prodotto, il nome del prodotto, una descrizione (se `fullWidthMode` è `true`), il prezzo del prodotto e un pulsante per aggiungere il prodotto al carrello.
+
+La componente `HomeComponent` include la componente `ProductBoxComponent` in una griglia. Il numero di colonne della griglia e l'altezza delle righe sono determinati dal valore di `cols` e `rowHeight`, rispettivamente. Se `cols` è 1, allora `fullWidthMode` è `true`.
+
+
 
 
 
