@@ -19,11 +19,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HeadersComponent } from './components/headers/headers.component';
+import { HomeComponent } from './pages/home/home.component';
+import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeadersComponent
+    HeadersComponent,
+    HomeComponent,
+    ProductsHeaderComponent
   ],
   imports: [
     BrowserModule,
