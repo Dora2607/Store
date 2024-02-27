@@ -21,13 +21,15 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HeadersComponent } from './components/headers/headers.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './pages/home/components/products-header/products-header.component';
+import { FiltersComponent } from './pages/home/components/filters/filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeadersComponent,
     HomeComponent,
-    ProductsHeaderComponent
+    ProductsHeaderComponent,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,
