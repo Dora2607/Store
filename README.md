@@ -16,6 +16,20 @@ Per installare e avviare l'applicazione, seguire i seguenti passaggi:
 2. Installare le dipendenze con `npm install`.
 3. Avviare l'applicazione con `ng serve`.
 
+## Checkout e Server
+
+L'applicazione include un processo di checkout che utilizza Stripe per gestire i pagamenti. Per far funzionare il checkout, l'applicazione utilizza un server Express che gestisce le richieste di checkout a Stripe.
+
+Per avviare il server Express, segui i seguenti passaggi:
+
+1. Apri un nuovo terminale.
+2. Naviga alla directory principale del progetto.
+3. Esegui `node server.js`.
+
+Questo avvierà il server Express sulla porta 4242. Assicurati che questa porta sia disponibile prima di avviare il server.
+
+Nota: Il server Express deve essere in esecuzione affinché il processo di checkout funzioni correttamente.
+
 
 ## Componenti
 
