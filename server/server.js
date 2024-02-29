@@ -8,9 +8,9 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cors({ origin: true, credentials: true }));
 
-const stripe = require("stripe")(
-  "sk_test_51Op7M8HrOwXOHOYDBvag92ZAp81ccLnHO6Ci3rNaWjMgc3ikODoUQbTOR3KS3lB3EudJh45812SYo3Etwich2fAc00jX2jkKy7"
-);
+import {environment} from '../src/environments/environment'
+
+const stripe = require("stripe")(environment.stripeKey);
 app.post("/checkout", async (req, res, next) => {
   try {
     const session = await stripe.checkout.sessions.create({
@@ -26,14 +26,14 @@ app.post("/checkout", async (req, res, next) => {
               amount: 0,
               currency: "usd",
             },
-            display_name: "Free shipping", // Qui è stato corretto l'errore di battitura
+            display_name: "Free shipping", 
             delivery_estimate: {
               minimum: {
                 unit: "business_day",
                 value: 5,
               },
               maximum: {
-                unit: "business_day", // Qui è stato corretto un altro errore di battitura
+                unit: "business_day", 
                 value: 7,
               },
             },
@@ -46,14 +46,14 @@ app.post("/checkout", async (req, res, next) => {
               amount: 1500,
               currency: "usd",
             },
-            display_name: "Next day air", // Qui è stato corretto l'errore di battitura
+            display_name: "Next day air", 
             delivery_estimate: {
               minimum: {
-                unit: "business_day", // Qui è stato corretto un altro errore di battitura
+                unit: "business_day",
                 value: 1,
               },
               maximum: {
-                unit: "business_day", // Qui è stato corretto un altro errore di battitura
+                unit: "business_day",
                 value: 1,
               },
             },
