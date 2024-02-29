@@ -8,9 +8,9 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cors({ origin: true, credentials: true }));
 
-import {environment} from '../src/environments/environment'
+require('dotenv').config();
 
-const stripe = require("stripe")(environment.stripeKey);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 app.post("/checkout", async (req, res, next) => {
   try {
     const session = await stripe.checkout.sessions.create({
